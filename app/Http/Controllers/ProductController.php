@@ -45,11 +45,11 @@ class ProductController extends Controller
         }
     }
 
-    public function show()
+    public function show(Product $product)
     {
-        $data = Product::get();
+        
         return response()->json([
-            'product' => $data,
+            'product' => $product
 
         ]);
     }
